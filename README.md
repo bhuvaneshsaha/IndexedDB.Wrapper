@@ -7,7 +7,9 @@
 | updateData   | Updates data in the specified store using the given ID.   |
 | deleteData   | Deletes data from the specified store using the given ID. |
 
+```js
 const dbWrapper = new IndexedDBWrapper("myDatabase", [{name: "myStore", key: "id"}]);
+```
 
 ```js
 // Example usage of openDatabase
