@@ -1,3 +1,12 @@
+| Feature          | IndexedDB                                                      | localStorage                               | sessionStorage                             |
+| ---------------- | -------------------------------------------------------------- | ------------------------------------------ | ------------------------------------------ |
+| Storage capacity | Can store large amounts of structured data                     | Typically limited to 5-10 MB per origin    | Typically limited to 5-10 MB per origin    |
+| Persistence      | Data is persistent even after the browser is closed            | Data is persistent until cleared by user   | Data is cleared when the browser is closed |
+| Data structure   | Supports complex data structures, including objects and arrays | Supports only strings                      | Supports only strings                      |
+| Querying         | Supports querying and indexing data                            | Does not support querying or indexing data | Does not support querying or indexing data |
+| Transactions     | Supports transactions for consistent data updates              | Does not support transactions              | Does not support transactions              |
+| Security         | Supports a per-origin security model                           | Supports a per-origin security model       | Supports a per-origin security model       |
+
 | Method Name  | Operation                                                 |
 | ------------ | --------------------------------------------------------- |
 | constructor  | Creates an instance of the IndexedDBWrapper class.        |
