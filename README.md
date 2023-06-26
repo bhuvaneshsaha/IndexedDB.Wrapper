@@ -1,3 +1,8 @@
+
+# IndexedDBWrapper
+
+IndexedDBWrapper is a wrapper for the IndexedDB API that makes it easier to use. It is a simple wrapper that provides a few methods to perform CRUD operations on the IndexedDB database.
+
 | Feature          | IndexedDB                                                      | localStorage                               | sessionStorage                             |
 | ---------------- | -------------------------------------------------------------- | ------------------------------------------ | ------------------------------------------ |
 | Storage capacity | Can store large amounts of structured data                     | Typically limited to 5-10 MB per origin    | Typically limited to 5-10 MB per origin    |
@@ -6,6 +11,8 @@
 | Querying         | Supports querying and indexing data                            | Does not support querying or indexing data | Does not support querying or indexing data |
 | Transactions     | Supports transactions for consistent data updates              | Does not support transactions              | Does not support transactions              |
 | Security         | Supports a per-origin security model                           | Supports a per-origin security model       | Supports a per-origin security model       |
+
+List of methods available in IndexedDBWrapper:
 
 | Method Name  | Operation                                                 |
 | ------------ | --------------------------------------------------------- |
@@ -16,7 +23,24 @@
 | updateData   | Updates data in the specified store using the given ID.   |
 | deleteData   | Deletes data from the specified store using the given ID. |
 
+> You need to copy ***wrapper.js*** from the ***dist/*** folder to your project and import it in your HTML file (or you can import it into any of your js framework).
+
+```html
+<script src="path/to/wrapper.js"></script>
+```
+
 ```js
+import IndexedDBWrapper from "path/to/wrapper.js";
+```
+
+```js
+let ff = require("path/to/wrapper.js");
+```
+
+--------------------------------
+
+```js
+// Create an instance of IndexedDBWrapper
 const dbWrapper = new IndexedDBWrapper("myDatabase", [{name: "myStore", key: "id"}]);
 ```
 
@@ -49,3 +73,5 @@ await dbWrapper.updateData(idToUpdate, newDataToUpdate, "myStore");
 const idToDelete = 1;
 await dbWrapper.deleteData(idToDelete, "myStore");
 ```
+
+> You can also refer to the ***index.html*** file in the ***example/*** folder for a working example.
